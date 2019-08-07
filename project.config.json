@@ -22,7 +22,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.7.7",
-	"appid": "wxfa11a327c8f6e3ad",
+	"appid": "wxfb52f2d7b2f6123a",
 	"projectname": "hmyg-666",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -48,13 +48,41 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
 					"name": "pages/goods_list/index",
 					"pathName": "pages/goods_list/index",
 					"query": "cid=5",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goods_detail/index",
+					"pathName": "pages/goods_detail/index",
+					"query": "goods_id=43986",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "历史",
+					"pathName": "pages/order/index",
+					"query": "type=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品收藏",
+					"pathName": "pages/collect/index",
+					"query": "type=1",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "pages/index/index",
+					"pathName": "pages/search/index",
+					"query": "type=1",
 					"scene": null
 				}
 			]

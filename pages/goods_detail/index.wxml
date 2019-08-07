@@ -1,2 +1,43 @@
-<!--pages/goods_detail/index.wxml-->
-<text>pages/goods_detail/index.wxml</text>
+<view class="detail_swiper" hover-class="none" hover-stop-propagation="false">
+  <swiper autoplay circular="{{true}}" indicator-dots="{{true}}">
+    <swiper-item wx:for="{{goodsInfo.pics}}" wx:key="pics_id" bindtap="handlePreviewImage" data-index="{{index}}">
+      <image src="{{item.pics_mid}}" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="goods_price" hover-class="none" hover-stop-propagation="false">
+  ￥{{goodsInfo.goods_price}}
+</view>
+<view class="goods_name_wrap" hover-class="none" hover-stop-propagation="false">
+  <view class="goods_name" hover-class="none" hover-stop-propagation="false">
+    {{goodsInfo.goods_name}}
+  </view>
+  <view class="goods_name_icon" bindtap="handleGoodsCollect">
+    <text class="iconfont {{isCollect?'icon-shoucang1':'icon-shoucang'}}"></text>
+    <view class="icon_name">收藏</view>
+  </view>
+</view>
+<view class="goods_detail" hover-class="none" hover-stop-propagation="false">
+  <view class="goods_detail_title" hover-class="none" hover-stop-propagation="false">图文详情</view>
+  <view class="goods_detail_content" hover-class="none" hover-stop-propagation="false">
+    <rich-text nodes="{{goodsInfo.goods_introduce}}"></rich-text>
+  </view>
+</view>
+<view class="btm_tool" hover-class="none" hover-stop-propagation="false">
+  <view class="tool_item" hover-class="none" hover-stop-propagation="false">
+    <text class="iconfont icon-kefu" selectable="false" space="false" decode="false"></text>
+    <view class="tool_name" hover-class="none" hover-stop-propagation="false">客服</view>
+    <button open-type="contact"></button>
+  </view>
+  <view class="tool_item" hover-class="none" hover-stop-propagation="false">
+    <text class="iconfont icon-yixianshi-" selectable="false" space="false" decode="false"></text>
+    <view class="tool_name" hover-class="none" hover-stop-propagation="false">分享</view>
+    <button open-type="share"></button>
+  </view>
+  <navigator open-type="switchTab" class="tool_item" url="/pages/cart/index">
+    <text class="iconfont icon-gouwuche"></text>
+    <view class="tool_name">购物车</view>
+  </navigator>
+  <view class="tool_item btn_cart" bindtap="handleCartAdd">加入购物车</view>
+  <view class="tool_item btn_buy">立即购买</view>
+</view>

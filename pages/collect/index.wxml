@@ -1,2 +1,14 @@
-<!--pages/collect/index.wxml-->
-<text>pages/collect/index.wxml</text>
+<view class="collect_img">
+  <image mode="widthFix" src="https://tva4.sinaimg.cn/large/007DFXDhgy1g5ouzdgyzzj30n205p74v.jpg "></image>
+</view>
+<view class="first_tab">
+  <navigator class="goods_group" wx:for="{{goodsList}}" wx:key="goods_id" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+    <view class="goods_img_wrap">
+      <image mode="widthFix" src="{{item.goods_small_logo||'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=686516802,2403556179&fm=15&gp=0.jpg'}}"></image>
+    </view>
+    <view class="goods_info_wrap">
+      <view class="goods_name">{{item.goods_name}}</view>
+      <view class="goods_price">￥{{item.goods_price}}</view>
+    </view>
+  </navigator>
+</view>

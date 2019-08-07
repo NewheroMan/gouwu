@@ -25,7 +25,7 @@ Component({
       const {
         index
       } = e.currentTarget.dataset;
-      this.triggerEvent("titleChange", {
+      this.triggerEvent("itemChange", {
         index
       })
     }

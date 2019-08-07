@@ -1,2 +1,9 @@
-<!--pages/search/index.wxml-->
-<text>pages/search/index.wxml</text>
+<view class="search_inp_row">
+  <input value="{{inputValue}}" placeholder="请输入要搜索的商品" bindinput="handeSearchInput"></input>
+  <button bindtap="handleCancel" hidden="{{!isFocus}}">取消</button>
+</view>
+<view class="search_list">
+  <navigator wx:for="{{goods}}" wx:key="goods_id" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+    {{item.goods_name}}
+  </navigator>
+</view>
